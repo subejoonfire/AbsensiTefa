@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1711991030;_ci_previous_url|s:36:"http://localhost:8080/form_kehadiran";LOGGED_IN|b:1;username|s:9:"Mahasiswa";role|s:9:"mahasiswa";_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:2:{s:7:"namamhs";s:9:"Mahasiswa";s:14:"locationStatus";s:5:"false";}}__ci_vars|a:2:{s:13:"_ci_old_input";s:3:"old";s:5:"error";s:3:"old";}error|s:19:"Lokasi tidak sesuai";

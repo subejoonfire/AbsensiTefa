@@ -1,0 +1,303 @@
+INFO - 2024-03-31 16:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 16:16:44 --> ErrorException: Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 202.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-03-31 16:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-31 16:16:48 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\absensi-tefa\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\absensi-tefa\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'absensi_tefa', 3306, '', 0)
+#1 C:\xampp\htdocs\absensi-tefa\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\absensi-tefa\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\absensi-tefa\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\absensi-tefa\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\absensi-tefa\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\absensi-tefa\app\Views\form_kehadiran.php(31): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\absensi-tefa\system\View\View.php(228): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\absensi-tefa\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\absensi-tefa\system\Common.php(1178): CodeIgniter\View\View->render('form_kehadiran', Array, true)
+#10 C:\xampp\htdocs\absensi-tefa\app\Controllers\RoutesController.php(12): view('form_kehadiran')
+#11 C:\xampp\htdocs\absensi-tefa\system\CodeIgniter.php(941): App\Controllers\RoutesController->form_kehadiran()
+#12 C:\xampp\htdocs\absensi-tefa\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoutesController))
+#13 C:\xampp\htdocs\absensi-tefa\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\absensi-tefa\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\absensi-tefa\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\absensi-tefa\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\absensi-tefa\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\absensi-tefa\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\absensi-tefa\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\absensi-tefa\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\absensi-tefa\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\absensi-tefa\app\Views\form_kehadiran.php(31): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\absensi-tefa\system\View\View.php(228): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\absensi-tefa\system\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp\htdocs\absensi-tefa\system\Common.php(1178): CodeIgniter\View\View->render('form_kehadiran', Array, true)
+#9 C:\xampp\htdocs\absensi-tefa\app\Controllers\RoutesController.php(12): view('form_kehadiran')
+#10 C:\xampp\htdocs\absensi-tefa\system\CodeIgniter.php(941): App\Controllers\RoutesController->form_kehadiran()
+#11 C:\xampp\htdocs\absensi-tefa\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoutesController))
+#12 C:\xampp\htdocs\absensi-tefa\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\absensi-tefa\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\absensi-tefa\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-03-31 16:16:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mahasiswa`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Views\form_kehadiran.php(31): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\absensi-tefa\\app\\Views\\form_kehadiran.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('form_kehadiran', [], true)
+ 9 APPPATH\Controllers\RoutesController.php(12): view('form_kehadiran')
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RoutesController->form_kehadiran()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoutesController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\absensi-tefa\\public\\index.php')
+INFO - 2024-03-31 16:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:17:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:32:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:33:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 16:34:04 --> ErrorException: Undefined array key "2024-03-31"
+in SYSTEMPATH\HTTP\URI.php on line 371.
+ 1 SYSTEMPATH\HTTP\URI.php(371): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "2024-03-31"', 'C:\\xampp\\htdocs\\absensi-tefa\\system\\HTTP\\URI.php', 371)
+ 2 SYSTEMPATH\HTTP\URI.php(635): CodeIgniter\HTTP\URI->getAuthority()
+ 3 SYSTEMPATH\HTTP\SiteURI.php(111): CodeIgniter\HTTP\URI->__toString()
+ 4 SYSTEMPATH\HTTP\SiteURI.php(386): CodeIgniter\HTTP\SiteURI->__construct(Object(Config\App), '/dashboardFilter/', 'localhost', '2024-03-31')
+ 5 SYSTEMPATH\Helpers\url_helper.php(58): CodeIgniter\HTTP\SiteURI->baseUrl('/dashboardFilter/', '2024-03-31')
+ 6 APPPATH\Views\operator\dashboard.php(59): base_url('/dashboardFilter/', '2024-03-31')
+ 7 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\absensi-tefa\\app\\Views\\operator\\dashboard.php')
+ 8 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 9 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('operator/dashboard', [], true)
+10 APPPATH\Controllers\RoutesController.php(21): view('operator/dashboard')
+11 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RoutesController->dashboard()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoutesController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\absensi-tefa\\public\\index.php')
+INFO - 2024-03-31 16:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 16:34:41 --> TypeError: Unsupported operand types: string + string
+in APPPATH\Views\operator\dashboard.php on line 59.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('operator/dashboard', [], true)
+ 4 APPPATH\Controllers\RoutesController.php(21): view('operator/dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RoutesController->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RoutesController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\absensi-tefa\\public\\index.php')
+INFO - 2024-03-31 16:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:00:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:01:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:06:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:08:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:11:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:15:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:16:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:16:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:17:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:18:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:18:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:50:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:50:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
