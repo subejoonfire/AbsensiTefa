@@ -33,7 +33,7 @@ $date->setDate(date('Y'), date('m'), date('d'));
             <span class="date"><?= $date->format('l, d F Y') ?></span>
             <div class="input-container">
                 <table class="input-table">
-                    <form action="/addAkunAction" method="post">
+                    <form action="<?= base_url('/addAkunAction') ?>" method="post">
                         <tbody>
                             <tr>
                                 <th>Role :</th>
